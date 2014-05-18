@@ -1,11 +1,11 @@
-## cache a matrix's inverse
-## Author:Ganqi Ou, Date:2014-05-19
-## Just Note: matrix must be a square and |A| not equal zero
+## Cache a matrix's inverse
+## Author:Ganqi Ou, Date:2014-05-20
+## Just Note: matrix must be a square matrics and |A| not equals zero
 
 ##construct a special Matrix which contains its inverse
 
 makeCacheMatrix <- function(x = matrix()) {
-      ## The <<- operator creates a eviroment
+      ## The <<- operator create eviroments
   ins <- NULL
   
   set <- function(y){
@@ -25,7 +25,7 @@ makeCacheMatrix <- function(x = matrix()) {
 ## solve a Matrix's inverse,if it has computed,get the cache,else compute the inverse
 
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
+        ## Return a matrix that is the inverse of 'x',also give a prompt message
   ins <- x$getinverse()
   
   if(!is.null(ins)){
